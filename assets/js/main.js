@@ -63,6 +63,18 @@ const up = document.querySelector(".btn_up");
 up.addEventListener('click', function () {
     --select;
     console.log(select);
+
+    if (select == -1) {
+        select = 4;
+    }
+
+    document.querySelector(".slide_wrapper.active").classList.remove("active");
+    document.getElementsByClassName("slide_wrapper")[select].classList.add("active");
+
+
+    document.querySelector(".mini.active").classList.remove("active");
+    document.getElementsByClassName("mini")[select].classList.add("active");
+
 })
 
 const down = document.querySelector(".btn_down");
@@ -70,4 +82,21 @@ const down = document.querySelector(".btn_down");
 down.addEventListener('click', function () {
     ++select;
     console.log(select);
+
+
+    if (select == items.length) {
+        select = 0;
+
+    }
+
+    document.querySelector(".slide_wrapper.active").classList.remove("active");
+    document.getElementsByClassName("slide_wrapper")[select].classList.add("active");
+
+
+    document.querySelector(".mini.active").classList.remove("active");
+    document.getElementsByClassName("mini")[select].classList.add("active");
+
+
+
+
 })
