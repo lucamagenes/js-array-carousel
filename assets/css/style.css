@@ -14,14 +14,22 @@
     margin: 5rem auto;
 }
 
+.slide_wrapper {
+    display: none;
+    height: 100%;
+    position: relative;
+}
+
+.slide_wrapper.active {
+    display: block;
+}
+
 .row {
     height: 100%;
 }
 
 .col_10 {
     width: calc((100% / 12) * 10);
-    height: 100%;
-    position: relative;
 }
 
 .col_10 img {
@@ -61,6 +69,7 @@
 }
 
 button {
+    cursor: pointer;
     position: absolute;
     border-radius: 10rem;
     padding: 0.2rem;
@@ -79,4 +88,13 @@ button {
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 0.5rem;
+}
+
+.mini {
+    filter: brightness(0.5);
+}
+
+.mini.active {
+    filter: brightness(1);
+    border: 1.5px solid white;
 }
